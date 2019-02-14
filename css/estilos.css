@@ -1,0 +1,184 @@
+/* Seteo general de la página */
+
+body{
+  background-color: #02010A;
+	color: white;
+	font-size: 16px;
+  font-family: 'Dancing Script', cursive;
+}
+
+a{
+  text-decoration: none;
+  color:white;
+}
+
+.imagen{
+  box-shadow: 2px 2px 0 #02010a;
+}
+
+#contenedor{
+  width: 900px;
+  margin: 0 auto;
+}
+
+
+/* Seteo del encabezado */
+
+
+header{
+  border-radius: 10px 10px 0px 0px;
+  background-color: #5b7989;
+  color: white;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  animation: correren 1s;
+}
+
+
+@keyframes correren {
+  0% {
+     margin-top: 150px;
+  }
+  60% {
+    margin-top: -5px;
+  }
+  100%{
+    margin-top: 0;
+  }
+}
+
+
+header h1{
+  text-shadow: 2px 0px 0px #02010a;
+  }
+
+#panelCentral{
+  background-color:#82C3A6;
+  display: flex;
+	flex-direction: column;
+}
+
+#panelCentral figure{
+  box-sizing: border-box;
+  margin: 10px auto;
+  text-align: center;
+  width: 100%;
+}
+
+#panelCentral figure img{
+  width: 85%;
+}
+
+
+/* Seteo del panel secundario */
+
+#panelSecundario{
+  background-color: #d5c75f;
+  display: flex;
+  flex-flow: row wrap;
+}
+
+#panelSecundario figure{
+  box-sizing: border-box;
+  margin: 10px auto;
+  text-align: center;
+}
+
+#retratos {
+  width: 50%;
+}
+
+ #retratos img{
+  width: 85%;
+  text-align: center;
+  transition-property: transform box-shadow;
+  transition-duration: 1s 1s;
+}
+
+#retratos img:hover{
+  transform: translate3d(20px, -5px, 0px);
+  box-shadow: 2px 2px 2px #82c3a6;
+}
+
+#paisajes {
+  width: 50%;
+}
+
+ #paisajes img{
+  width:85%;
+  text-align: center;
+  transition-property: transform box-shadow;
+  transition-duration: 1s 1s;
+
+}
+
+#paisajes img:hover{
+  transform:rotate(10deg);
+  box-shadow: 2px 2px 2px #82c3a6;
+}
+
+/* Seteo del pie de pagina a 900px */
+
+footer{
+  background-color: #C6d5c5;
+  border-radius: 0px 0px 10px 10px;
+  display: flex;
+  flex-flow: row wrap;
+  color: black;
+}
+ footer > div{
+   width: 20%;
+   padding: 2.5%;
+ }
+
+  footer div p a img{
+   margin: 5px;
+   width: 22px;
+   vertical-align: middle;
+   text-align: left;
+}
+
+footer div p img{
+  margin: 5px;
+  width: 22px;
+  border-radius: 11px;
+  vertical-align: middle;
+  text-align: left;
+}
+
+footer div p a {
+  color:black;
+}
+/* media query ancho maximo 900px */
+
+@media (max-width: 900px){
+
+  #contenedor{
+    width: 90%;
+  }
+
+
+  header{
+    text-aling: center;
+    display: flex;
+    flex-direction: column;
+  }
+
+
+  #retratos, #paisajes{
+    width: 100%;
+  }
+
+  footer
+  {
+    display: flex;
+    flex-direction: column;
+  }
+
+  footer div
+  {
+    width: 100%;
+  }
+
+}
